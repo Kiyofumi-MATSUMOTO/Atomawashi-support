@@ -5,97 +5,231 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プライバシーポリシー — あとまわし</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-    line-height: 1.8;
-    max-width: 42rem;
-    margin: 0 auto;
-    padding: 2rem 1.25rem 4rem;
+  :root {
+    color-scheme: light dark;
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --text: #1b2430;
+    --muted: #5d6b7c;
+    --accent: #0a6ed2;
+    --border: #e1e8f0;
+    --tint: #eaf3fd;
+    --tint-border: #0a6ed2;
   }
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.15rem; margin-top: 2.5rem; }
-  .meta { color: #6b7280; font-size: .9rem; }
-  hr { border: none; border-top: 1px solid #d1d5db; margin: 3rem 0; }
-  ul { padding-left: 1.2rem; }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f141b;
+      --surface: #161d26;
+      --text: #e7edf4;
+      --muted: #9aa9ba;
+      --accent: #5cadf5;
+      --border: #28323e;
+      --tint: #16283a;
+      --tint-border: #5cadf5;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                 "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
+    line-height: 1.85;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main { max-width: 44rem; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .app-name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.2rem;
+  }
+
+  .page-label { color: var(--muted); margin: 0; font-size: 1rem; }
+
+  .meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.6rem; }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 2rem;
+  }
+
+  nav a, nav span {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  nav span[aria-current] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  h3 { font-size: 1.02rem; margin: 1.6rem 0 0.4rem; }
+  h3:first-of-type { margin-top: 0; }
+
+  p { margin: 0.5rem 0; }
+  ul { margin: 0.5rem 0; padding-left: 1.3rem; }
+  li { margin: 0.3rem 0; }
+
+  .lead {
+    background: var(--tint);
+    border-left: 4px solid var(--tint-border);
+    border-radius: 0 8px 8px 0;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.4rem;
+    font-weight: 600;
+  }
+
+  dl { margin: 0; }
+
+  dt {
+    font-weight: 700;
+    margin-top: 1.5rem;
+    padding-left: 0.85rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  dt:first-of-type { margin-top: 0; }
+
+  dd { margin: 0.35rem 0 0 0.85rem; color: var(--text); }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
 </style>
 </head>
 <body>
+<main>
 
-<h1>プライバシーポリシー</h1>
-<p class="meta">アプリ名：あとまわし（Atomawashi）<br>
-最終更新日：2026年8月21日</p>
+  <header>
+    <p class="app-name">あとまわし</p>
+    <p class="page-label">プライバシーポリシー / Privacy Policy</p>
+    <p class="meta">アプリ名：あとまわし（Atomawashi）<br>最終更新日 / Last updated: 2026年8月21日</p>
+  </header>
 
-<p>本ポリシーは、iOS アプリ「あとまわし」（以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
+  <nav>
+    <a href="index.html">サポート</a>
+    <span aria-current="page">プライバシーポリシー</span>
+  </nav>
 
-<h2>1. 収集する情報</h2>
-<p>本アプリの開発者は、利用者に関するいかなる情報も収集しません。個人情報、利用状況、端末識別子、位置情報、広告識別子のいずれも取得しておらず、開発者がアクセスできるサーバーは存在しません。</p>
+  <section lang="ja">
+    <h2>プライバシーポリシー</h2>
 
-<h2>2. 端末内に保存される情報</h2>
-<p>利用者が本アプリに入力・保存した以下の情報は、利用者の端末内にのみ保存されます。</p>
-<ul>
-  <li>項目のタイトル、URL、メモ</li>
-  <li>各項目の状態（未処理／やった／やらない）および作成・更新・完了の日時</li>
-  <li>リマインダー通知の有効・無効、曜日ごとの通知時刻</li>
-</ul>
-<p>これらは iOS のアプリケーショングループ領域に保存され、外部に送信されることはありません。本アプリを削除すると、これらの情報も端末から削除されます。</p>
+    <p>本ポリシーは、iOS アプリ「あとまわし」（以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
 
-<h2>3. 共有機能について</h2>
-<p>本アプリは、Safari その他のアプリの共有メニューから項目を追加する機能を備えています。この機能で取得されるのは、利用者が共有操作を行った対象のタイトル・URL・テキストのみであり、いずれも端末内への保存にのみ使用されます。閲覧履歴の取得・送信は一切行いません。</p>
+    <h3>1. 収集する情報</h3>
+    <p>本アプリの開発者は、利用者に関するいかなる情報も収集しません。個人情報、利用状況、端末識別子、位置情報、広告識別子のいずれも取得しておらず、開発者がアクセスできるサーバーは存在しません。</p>
 
-<h2>4. 通知について</h2>
-<p>本アプリが送信する通知はすべて端末内で生成されるローカル通知です。プッシュ通知サーバーは使用しておらず、通知の内容が外部に送信されることはありません。通知の許可は iOS の「設定」からいつでも変更できます。</p>
+    <h3>2. 端末内に保存される情報</h3>
+    <p>利用者が本アプリに入力・保存した以下の情報は、利用者の端末内にのみ保存されます。</p>
+    <ul>
+      <li>項目のタイトル、URL、メモ</li>
+      <li>各項目の状態（未処理／やった／やらない）および作成・更新・完了の日時</li>
+      <li>リマインダー通知の有効・無効、曜日ごとの通知時刻</li>
+    </ul>
+    <p>これらは iOS のアプリケーショングループ領域に保存され、外部に送信されることはありません。本アプリを削除すると、これらの情報も端末から削除されます。</p>
 
-<h2>5. バックアップ機能について</h2>
-<p>本アプリには、保存した項目を JSON ファイルとして書き出す機能があります。書き出されたファイルの保存先は利用者が選択するものであり、開発者は当該ファイルにアクセスできません。iCloud Drive など外部のサービスに保存した場合は、当該サービスのプライバシーポリシーが適用されます。</p>
+    <h3>3. 共有機能について</h3>
+    <p>本アプリは、Safari その他のアプリの共有メニューから項目を追加する機能を備えています。この機能で取得されるのは、利用者が共有操作を行った対象のタイトル・URL・テキストのみであり、いずれも端末内への保存にのみ使用されます。閲覧履歴の取得・送信は一切行いません。</p>
 
-<h2>6. 第三者への提供・外部サービスの利用</h2>
-<p>本アプリは、解析ツール、広告ネットワーク、クラッシュレポート収集サービスその他の第三者提供ライブラリを一切使用していません。したがって、利用者の情報が第三者に提供されることはありません。</p>
+    <h3>4. 通知について</h3>
+    <p>本アプリが送信する通知はすべて端末内で生成されるローカル通知です。プッシュ通知サーバーは使用しておらず、通知の内容が外部に送信されることはありません。通知の許可は iOS の「設定」からいつでも変更できます。</p>
 
-<h2>7. トラッキング</h2>
-<p>本アプリは、App Tracking Transparency に定義されるトラッキングを行いません。</p>
+    <h3>5. バックアップ機能について</h3>
+    <p>本アプリには、保存した項目を JSON ファイルとして書き出す機能があります。書き出されたファイルの保存先は利用者が選択するものであり、開発者は当該ファイルにアクセスできません。iCloud Drive など外部のサービスに保存した場合は、当該サービスのプライバシーポリシーが適用されます。</p>
 
-<h2>8. 端末のバックアップ</h2>
-<p>本アプリのデータは、利用者の設定に応じて iCloud バックアップまたは暗号化されたローカルバックアップに含まれる場合があります。これらは Apple が提供する仕組みであり、その取り扱いは Apple のプライバシーポリシーに従います。</p>
+    <h3>6. 第三者への提供・外部サービスの利用</h3>
+    <p>本アプリは、解析ツール、広告ネットワーク、クラッシュレポート収集サービスその他の第三者提供ライブラリを一切使用していません。したがって、利用者の情報が第三者に提供されることはありません。</p>
 
-<h2>9. お子様のプライバシー</h2>
-<p>本アプリは、13歳未満の児童を対象としたものではなく、児童から情報を収集することもありません。</p>
+    <h3>7. トラッキング</h3>
+    <p>本アプリは、App Tracking Transparency に定義されるトラッキングを行いません。</p>
 
-<h2>10. 本ポリシーの変更</h2>
-<p>本ポリシーを変更する場合は、本ページ上の最終更新日を改めた上で掲載します。</p>
+    <h3>8. 端末のバックアップ</h3>
+    <p>本アプリのデータは、利用者の設定に応じて iCloud バックアップまたは暗号化されたローカルバックアップに含まれる場合があります。これらは Apple が提供する仕組みであり、その取り扱いは Apple のプライバシーポリシーに従います。</p>
 
-<h2>11. お問い合わせ</h2>
-<p>本アプリおよび本ポリシーに関するお問い合わせは、次の連絡先までお願いいたします。</p>
-<p><a href="mailto:dashes-05-elm@icloud.com">dashes-05-elm@icloud.com</a></p>
+    <h3>9. お子様のプライバシー</h3>
+    <p>本アプリは、13歳未満の児童を対象としたものではなく、児童から情報を収集することもありません。</p>
 
-<hr>
+    <h3>10. 本ポリシーの変更</h3>
+    <p>本ポリシーを変更する場合は、本ページ上の最終更新日を改めた上で掲載します。</p>
 
-<h1>Privacy Policy</h1>
-<p class="meta">App: Atomawashi<br>Last updated: 21 August 2026</p>
+    <h3>11. お問い合わせ</h3>
+    <p>本アプリおよび本ポリシーに関するお問い合わせは、次の連絡先までお願いいたします。</p>
+    <p><a href="mailto:dashes-05-elm@icloud.com">dashes-05-elm@icloud.com</a></p>
+  </section>
 
-<h2>1. Information we collect</h2>
-<p>The developer of Atomawashi collects no information about you. The app contains no analytics, no advertising, and no crash-reporting services, and there is no server the developer can access.</p>
+  <section lang="en">
+    <h2>Privacy Policy</h2>
 
-<h2>2. Information stored on your device</h2>
-<p>Items you save — their titles, URLs, notes, status and timestamps — along with your reminder settings, are stored only in the app's container on your device. Nothing is transmitted off the device. Deleting the app removes this data.</p>
+    <h3>1. Information we collect</h3>
+    <p>The developer of Atomawashi collects no information about you. The app contains no analytics, no advertising, and no crash-reporting services, and there is no server the developer can access.</p>
 
-<h2>3. Share extension</h2>
-<p>When you share a page or text into Atomawashi, only the title, URL or text of that item is read, and it is stored solely on your device. The app does not read or transmit your browsing history.</p>
+    <h3>2. Information stored on your device</h3>
+    <p>Items you save &mdash; their titles, URLs, notes, status and timestamps &mdash; along with your reminder settings, are stored only in the app's container on your device. Nothing is transmitted off the device. Deleting the app removes this data.</p>
 
-<h2>4. Notifications</h2>
-<p>All notifications are local notifications generated on your device. No push notification service is used.</p>
+    <h3>3. Share extension</h3>
+    <p>When you share a page or text into Atomawashi, only the title, URL or text of that item is read, and it is stored solely on your device. The app does not read or transmit your browsing history.</p>
 
-<h2>5. Backups you export</h2>
-<p>You may export your items as a JSON file. You choose where that file is saved, and the developer has no access to it. If you store it in a third-party service such as iCloud Drive, that service's privacy policy applies.</p>
+    <h3>4. Notifications</h3>
+    <p>All notifications are local notifications generated on your device. No push notification service is used.</p>
 
-<h2>6. Tracking</h2>
-<p>Atomawashi does not perform tracking as defined by Apple's App Tracking Transparency framework.</p>
+    <h3>5. Backups you export</h3>
+    <p>You may export your items as a JSON file. You choose where that file is saved, and the developer has no access to it. If you store it in a third-party service such as iCloud Drive, that service's privacy policy applies.</p>
 
-<h2>7. Children's privacy</h2>
-<p>Atomawashi is not directed at children under 13 and does not knowingly collect information from them.</p>
+    <h3>6. Tracking</h3>
+    <p>Atomawashi does not perform tracking as defined by Apple's App Tracking Transparency framework.</p>
 
-<h2>8. Contact</h2>
-<p><a href="mailto:dashes-05-elm@icloud.com">dashes-05-elm@icloud.com</a></p>
+    <h3>7. Children's privacy</h3>
+    <p>Atomawashi is not directed at children under 13 and does not knowingly collect information from them.</p>
 
+    <h3>8. Contact</h3>
+    <p><a href="mailto:dashes-05-elm@icloud.com">dashes-05-elm@icloud.com</a></p>
+  </section>
+
+
+  <footer>
+    <p>あとまわし</p>
+  </footer>
+
+</main>
 </body>
 </html>

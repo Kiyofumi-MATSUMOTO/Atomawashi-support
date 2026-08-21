@@ -5,51 +5,188 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>あとまわし — サポート</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-    line-height: 1.8;
-    max-width: 42rem;
-    margin: 0 auto;
-    padding: 2rem 1.25rem 4rem;
+  :root {
+    color-scheme: light dark;
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --text: #1b2430;
+    --muted: #5d6b7c;
+    --accent: #0a6ed2;
+    --border: #e1e8f0;
+    --tint: #eaf3fd;
+    --tint-border: #0a6ed2;
   }
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.15rem; margin-top: 2.5rem; }
-  dt { font-weight: 600; margin-top: 1.25rem; }
-  dd { margin: .25rem 0 0; }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f141b;
+      --surface: #161d26;
+      --text: #e7edf4;
+      --muted: #9aa9ba;
+      --accent: #5cadf5;
+      --border: #28323e;
+      --tint: #16283a;
+      --tint-border: #5cadf5;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                 "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
+    line-height: 1.85;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main { max-width: 44rem; margin: 0 auto; }
+
+  header { text-align: center; margin-bottom: 2rem; }
+
+  .app-name {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.2rem;
+  }
+
+  .page-label { color: var(--muted); margin: 0; font-size: 1rem; }
+
+  .meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.6rem; }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 2rem;
+  }
+
+  nav a, nav span {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    text-decoration: none;
+    color: var(--accent);
+  }
+
+  nav span[aria-current] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.6rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  h3 { font-size: 1.02rem; margin: 1.6rem 0 0.4rem; }
+  h3:first-of-type { margin-top: 0; }
+
+  p { margin: 0.5rem 0; }
+  ul { margin: 0.5rem 0; padding-left: 1.3rem; }
+  li { margin: 0.3rem 0; }
+
+  .lead {
+    background: var(--tint);
+    border-left: 4px solid var(--tint-border);
+    border-radius: 0 8px 8px 0;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.4rem;
+    font-weight: 600;
+  }
+
+  dl { margin: 0; }
+
+  dt {
+    font-weight: 700;
+    margin-top: 1.5rem;
+    padding-left: 0.85rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  dt:first-of-type { margin-top: 0; }
+
+  dd { margin: 0.35rem 0 0 0.85rem; color: var(--text); }
+
+  a { color: var(--accent); text-underline-offset: 2px; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
 </style>
 </head>
 <body>
+<main>
 
-<h1>あとまわし — サポート</h1>
+  <header>
+    <p class="app-name">あとまわし</p>
+    <p class="page-label">サポート</p>
+  </header>
 
-<p>「あとまわし」は、あとで読む・あとでやることを書き留めておくための、シンプルな iPhone 用アプリです。</p>
+  <nav>
+    <span aria-current="page">サポート</span>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
 
-<h2>よくある質問</h2>
+  <section>
+    <p class="lead">
+      「あとまわし」は、あとで読む・あとでやることを書き留めておくための、
+      シンプルな iPhone 用アプリです。
+    </p>
 
-<dl>
-  <dt>Safari で見ているページを追加するには？</dt>
-  <dd>共有ボタンを押し、共有シートから「あとまわし」を選んでください。ページのタイトルと URL がそのまま登録されます。他のアプリからテキストや URL を共有することもできます。</dd>
+    <h2>よくある質問</h2>
 
-  <dt>リマインダーが届きません。</dt>
-  <dd>アプリ内の設定で「通知を有効にする」がオンになっているか、また iOS の「設定」→「あとまわし」→「通知」で通知が許可されているかをご確認ください。</dd>
+    <dl>
+      <dt>Safari で見ているページを追加するには？</dt>
+      <dd>共有ボタンを押し、共有シートから「あとまわし」を選んでください。ページのタイトルと URL がそのまま登録されます。他のアプリからテキストや URL を共有することもできます。</dd>
 
-  <dt>機種変更するときは？</dt>
-  <dd>設定画面の「エクスポート」で全項目を JSON ファイルとして書き出し、新しい端末で「インポート」から読み込んでください。同じ項目が二重に登録されることはありません。</dd>
+      <dt>リマインダーが届きません。</dt>
+      <dd>アプリ内の設定で「通知を有効にする」がオンになっているか、また iOS の「設定」→「あとまわし」→「通知」で通知が許可されているかをご確認ください。</dd>
 
-  <dt>削除した項目を元に戻せますか？</dt>
-  <dd>削除した項目は元に戻せません。「やった」「やらない」で処理済みにした項目であれば、長押しメニューの「未処理に戻す」でいつでも戻せます。</dd>
+      <dt>機種変更するときは？</dt>
+      <dd>設定画面の「エクスポート」で全項目を JSON ファイルとして書き出し、新しい端末で「インポート」から読み込んでください。同じ項目が二重に登録されることはありません。</dd>
 
-  <dt>データはどこに保存されますか？</dt>
-  <dd>お使いの端末の中だけです。外部のサーバーには一切送信されません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</dd>
-</dl>
+      <dt>削除した項目を元に戻せますか？</dt>
+      <dd>削除した項目は元に戻せません。「やった」「やらない」で処理済みにした項目であれば、長押しメニューの「未処理に戻す」でいつでも戻せます。</dd>
 
-<h2>お問い合わせ</h2>
-<p>不具合のご報告やご要望は、次の連絡先までお願いいたします。</p>
-<p><a href="mailto:dashes-05-elm@icloud.com">dashes-05-elm@icloud.com</a></p>
+      <dt>データはどこに保存されますか？</dt>
+      <dd>お使いの端末の中だけです。外部のサーバーには一切送信されません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</dd>
+    </dl>
+  </section>
 
-<h2>プライバシー</h2>
-<p><a href="privacy.html">プライバシーポリシー</a></p>
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>不具合のご報告やご要望は、次の連絡先までお願いいたします。</p>
+    <p><a href="mailto:dashes-05-elm@icloud.com">dashes-05-elm@icloud.com</a></p>
+  </section>
 
+
+  <footer>
+    <p>あとまわし</p>
+  </footer>
+
+</main>
 </body>
 </html>

@@ -143,7 +143,7 @@
   <header>
     <p class="app-name">あとまわし</p>
     <p class="page-label">プライバシーポリシー / Privacy Policy</p>
-    <p class="meta">アプリ名：あとまわし（Atomawashi）<br>最終更新日 / Last updated: 2026年8月21日</p>
+    <p class="meta">アプリ名：あとまわし（Atomawashi）<br>最終更新日 / Last updated: 2026年11月8日</p>
   </header>
 
   <nav>
@@ -154,25 +154,26 @@
   <section lang="ja">
     <h2>プライバシーポリシー</h2>
 
-    <p>本ポリシーは、iOS アプリ「あとまわし」（以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
+    <p>本ポリシーは、iPhone・iPad・Mac 向けアプリ「あとまわし」（以下「本アプリ」）における利用者情報の取り扱いについて定めるものです。</p>
 
     <h3>1. 収集する情報</h3>
     <p>本アプリの開発者は、利用者に関するいかなる情報も収集しません。個人情報、利用状況、端末識別子、位置情報、広告識別子のいずれも取得しておらず、開発者がアクセスできるサーバーは存在しません。</p>
 
-    <h3>2. 端末内に保存される情報</h3>
-    <p>利用者が本アプリに入力・保存した以下の情報は、利用者の端末内にのみ保存されます。</p>
+    <h3>2. 保存される情報と iCloud による同期</h3>
+    <p>利用者が本アプリに入力・保存した以下の情報は、利用者の端末内に保存されます。</p>
     <ul>
       <li>項目のタイトル、URL、メモ</li>
       <li>各項目の状態（未処理／やった／やらない）および作成・更新・完了の日時</li>
-      <li>リマインダー通知の有効・無効、曜日ごとの通知時刻</li>
     </ul>
-    <p>これらは iOS のアプリケーショングループ領域に保存され、外部に送信されることはありません。本アプリを削除すると、これらの情報も端末から削除されます。</p>
+    <p>利用者が端末で iCloud にサインインしている場合、これらの項目は、利用者自身の iCloud アカウントのプライベートデータベース（Apple の CloudKit）にも保存され、同じ Apple Account でサインインしている利用者の他の端末と同期されます。このデータベースは利用者本人だけが利用できる領域であり、開発者がその内容を閲覧・取得することはできません。iCloud に保存されたデータの取り扱いには、Apple のプライバシーポリシーが適用されます。iCloud を使用しない場合、項目は端末内にのみ保存されます。</p>
+    <p>リマインダー通知の有効・無効および曜日ごとの通知時刻は、端末内にのみ保存され、iCloud には保存されません。</p>
+    <p>本アプリを削除すると、端末内の情報は削除されます。iCloud に保存された項目は、他の端末で引き続き利用できます。</p>
 
     <h3>3. 共有機能について</h3>
-    <p>本アプリは、Safari その他のアプリの共有メニューから項目を追加する機能を備えています。この機能で取得されるのは、利用者が共有操作を行った対象のタイトル・URL・テキストのみであり、いずれも端末内への保存にのみ使用されます。閲覧履歴の取得・送信は一切行いません。</p>
+    <p>本アプリは、Safari その他のアプリの共有メニューから項目を追加する機能を備えています。この機能で取得されるのは、利用者が共有操作を行った対象のタイトル・URL・テキストのみであり、第2条のとおり項目として保存されます。閲覧履歴の取得・送信は一切行いません。</p>
 
     <h3>4. 通知について</h3>
-    <p>本アプリが送信する通知はすべて端末内で生成されるローカル通知です。プッシュ通知サーバーは使用しておらず、通知の内容が外部に送信されることはありません。通知の許可は iOS の「設定」からいつでも変更できます。</p>
+    <p>本アプリのリマインダーは、すべて端末内で生成されるローカル通知です。通知の内容が外部に送信されることはありません。なお、iCloud による同期では、他の端末で項目が変更されたことを知らせるために Apple のプッシュ通知の仕組みが使われます。これは画面に表示される通知ではなく、項目の内容を開発者が受け取ることもありません。通知の許可は「設定」アプリ（Mac では「システム設定」）からいつでも変更できます。</p>
 
     <h3>5. バックアップ機能について</h3>
     <p>本アプリには、保存した項目を JSON ファイルとして書き出す機能があります。書き出されたファイルの保存先は利用者が選択するものであり、開発者は当該ファイルにアクセスできません。iCloud Drive など外部のサービスに保存した場合は、当該サービスのプライバシーポリシーが適用されます。</p>
@@ -203,14 +204,16 @@
     <h3>1. Information we collect</h3>
     <p>The developer of Atomawashi collects no information about you. The app contains no analytics, no advertising, and no crash-reporting services, and there is no server the developer can access.</p>
 
-    <h3>2. Information stored on your device</h3>
-    <p>Items you save &mdash; their titles, URLs, notes, status and timestamps &mdash; along with your reminder settings, are stored only in the app's container on your device. Nothing is transmitted off the device. Deleting the app removes this data.</p>
+    <h3>2. Information you store and iCloud sync</h3>
+    <p>Items you save &mdash; their titles, URLs, notes, status and timestamps &mdash; are stored on your device. If you are signed in to iCloud, they are also stored in the private database of your own iCloud account (Apple's CloudKit) and synced to your other devices signed in to the same Apple Account. Only you can access this database; the developer cannot view or retrieve its contents. Apple's privacy policy applies to data stored in iCloud. Without iCloud, items stay on your device only.</p>
+    <p>Your reminder settings are stored only on each device and are not stored in iCloud.</p>
+    <p>Deleting the app removes the data on that device. Items stored in iCloud remain available on your other devices.</p>
 
     <h3>3. Share extension</h3>
-    <p>When you share a page or text into Atomawashi, only the title, URL or text of that item is read, and it is stored solely on your device. The app does not read or transmit your browsing history.</p>
+    <p>When you share a page or text into Atomawashi, only the title, URL or text of that item is read, and it is saved as an item as described in section 2. The app does not read or transmit your browsing history.</p>
 
     <h3>4. Notifications</h3>
-    <p>All notifications are local notifications generated on your device. No push notification service is used.</p>
+    <p>Reminders are local notifications generated on your device; their content is not sent anywhere. iCloud sync uses Apple's push notification service to tell your other devices that items have changed. These are not visible notifications, and the developer does not receive your items through them.</p>
 
     <h3>5. Backups you export</h3>
     <p>You may export your items as a JSON file. You choose where that file is saved, and the developer has no access to it. If you store it in a third-party service such as iCloud Drive, that service's privacy policy applies.</p>
